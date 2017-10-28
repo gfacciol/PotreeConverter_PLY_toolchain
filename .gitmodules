@@ -1,0 +1,3 @@
+[submodule "PotreeConverter"]
+	path = PotreeConverter
+	url = https://github.com/gfacciol/PotreeConverter
