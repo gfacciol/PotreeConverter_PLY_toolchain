@@ -16,12 +16,18 @@ fi
 ./PotreeConverter/LAStools/bin/txt2las -parse xyzRGB -verbose -i  $cloud -o $blas 2>/dev/null
 
 # convert to potree
+# copy the template
+cp -r PotreeConverter/PotreeConverter/resources PotreeConverter/build/PotreeConverter/
+mv PotreeConverter/build/PotreeConverter/resources/page_template/viewer_template{_flip,}.html
+
+# run  the conversion
 export LC_ALL=C
 ./PotreeConverter/build/PotreeConverter/PotreeConverter $blas -o testdata -p testPotree --edl-enabled --material ELEVATION --overwrite
 
 # clean
 rm $aply $blas
 
-# launch a simple webserver
-#python -m SimpleHTTPServer &
+echo ""
+echo "Launch a simple webserver and visit http://localhost:8000/testdata"
+echo "> python -m SimpleHTTPServer &"
 
