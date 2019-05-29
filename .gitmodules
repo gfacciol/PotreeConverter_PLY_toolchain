@@ -1,3 +1,4 @@
 [submodule "PotreeConverter"]
 	path = PotreeConverter
 	url = https://github.com/cmla/PotreeConverter
+    ignore = dirty
