@@ -29,5 +29,5 @@ rm $aply $blas
 
 echo ""
 echo "Launch a simple webserver and visit http://localhost:8000/testdata"
-echo "> python -m SimpleHTTPServer &"
+echo "> python3 -m  http.server  &"
 
